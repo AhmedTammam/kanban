@@ -40,6 +40,7 @@ class NoteForm extends Component {
 		});
 	};
 	render() {
+		const style = `${this.props.color} waves-effect waves-light btn`;
 		return (
 			<div className="row">
 				<form className="col s12" onSubmit={this.submit}>
@@ -54,7 +55,7 @@ class NoteForm extends Component {
 						/>
 					</div>
 					<div className="input-field col s2">
-						<button className="waves-effect waves-light btn blue">+</button>
+						<button className={style}>+</button>
 					</div>
 				</form>
 			</div>

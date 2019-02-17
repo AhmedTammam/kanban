@@ -5,12 +5,13 @@ import BoardBody from './BoardBody';
 
 export default class Board extends Component {
 	render() {
+		const { name, color, code } = this.props;
 		return (
 			<div className="col s3">
 				<div className=" card">
-					<BoardHeader name={this.props.name} />
-					<NoteForm parent={this.props.code} />
-					<BoardBody parent={this.props.code} />
+					<BoardHeader name={name} color={color} />
+					<NoteForm parent={code} color={color} />
+					<BoardBody parent={code} />
 				</div>
 			</div>
 		);

@@ -4,7 +4,9 @@ import Board from './Board';
 
 class Boards extends Component {
 	renderBoards = () => {
-		return this.props.boards.map((board) => <Board key={board.id} name={board.name} code={board.id} />);
+		return this.props.boards.map((board) => (
+			<Board key={board.id} name={board.name} code={board.id} color={board.color} />
+		));
 	};
 	render() {
 		return (
