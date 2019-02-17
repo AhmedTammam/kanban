@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import boardReducer from './boardReducer';
+import noteReducer from './noteReducer';
 
 const Reducers = combineReducers({
-	boardRed: boardReducer
+	boards: boardReducer,
+	notes: noteReducer
 });
 
 export default Reducers;

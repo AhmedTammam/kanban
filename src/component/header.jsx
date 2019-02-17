@@ -6,7 +6,9 @@ export default class Header extends Component {
 			<div className="blue">
 				<div className="container">
 					<div className="row">
-						<div className="col s12 timepicker-text-container">Kanban</div>
+						<div className="col s12 center-align white-text">
+							<h5>Kanban</h5>
+						</div>
 					</div>
 				</div>
 			</div>
