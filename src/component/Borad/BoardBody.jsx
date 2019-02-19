@@ -7,7 +7,7 @@ class BoardBody extends Component {
 	notesRender = () => {
 		return this.props.notes
 			.filter((note) => note.parent === this.props.parent)
-			.map((note) => <Note name={note.note} id={note.id} key={note.id} />);
+			.map((note) => <Note bg={this.props.color} name={note.note} id={note.id} key={note.id} />);
 	};
 	render() {
 		return <div className="card-content">{this.notesRender()}</div>;

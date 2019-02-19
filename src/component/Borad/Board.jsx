@@ -11,7 +11,7 @@ export default class Board extends Component {
 				<div className=" card">
 					<BoardHeader name={name} color={color} />
 					<NoteForm parent={code} color={color} />
-					<BoardBody parent={code} />
+					<BoardBody parent={code} color={color} />
 				</div>
 			</div>
 		);
