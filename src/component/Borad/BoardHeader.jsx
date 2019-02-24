@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class BoardHeader extends Component {
+import { laneNameChange } from '../../redux/actions/actionsCreator';
+
+class BoardHeader extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -12,7 +15,11 @@ export default class BoardHeader extends Component {
 		this.setState(({ edit }) => ({ edit: !edit }));
 	};
 	nameChange = (e) => {
-		console.log(e.target.value);
+		const lane = {
+			name: e.target.value,
+			id: this.props.index
+		};
+		this.props.laneNameChange(lane);
 	};
 
 	render() {
@@ -41,3 +48,9 @@ export default class BoardHeader extends Component {
 		);
 	}
 }
+const mapDispatchToProps = (dispatch) => {
+	return {
+		laneNameChange: (lane) => dispatch(laneNameChange(lane))
+	};
+};
+export default connect(null, mapDispatchToProps)(BoardHeader);

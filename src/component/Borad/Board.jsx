@@ -9,7 +9,7 @@ export default class Board extends Component {
 		return (
 			<div className="col s3">
 				<div className=" card">
-					<BoardHeader name={name} color={color} />
+					<BoardHeader name={name} color={color} index={code} />
 					<NoteForm parent={code} color={color} />
 					<BoardBody parent={code} color={color} />
 				</div>

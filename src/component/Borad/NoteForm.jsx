@@ -63,9 +63,9 @@ class NoteForm extends Component {
 	}
 }
 
-const mapStateToPropos = (dispatch) => {
+const mapDispatchToPropos = (dispatch) => {
 	return {
 		addNote: (note) => dispatch(addNote(note))
 	};
 };
-export default connect(null, mapStateToPropos)(NoteForm);
+export default connect(null, mapDispatchToPropos)(NoteForm);

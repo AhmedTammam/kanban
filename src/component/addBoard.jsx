@@ -33,8 +33,6 @@ class AddBoard extends Component {
 				color: e.target.value
 			}
 		});
-
-		console.log(e.target.value);
 	};
 
 	submit = (e) => {
@@ -48,7 +46,6 @@ class AddBoard extends Component {
 				color: 'choose'
 			}
 		});
-		console.log(this.state);
 	};
 
 	render() {
