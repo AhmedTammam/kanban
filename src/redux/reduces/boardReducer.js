@@ -7,8 +7,9 @@ export default function boardReducer(state = initialState, action) {
 			return [ ...state, action.payload ];
 		case LANE_NAME_CHANGE:
 			const lane = state.filter((lane) => lane.id === action.payload.id);
-			lane.name = action.payload.name;
-			return [ ...state, ...lane, lane ];
+			lane[0].name = action.payload.name;
+			// const newState = [ ...lane, action.payload.name ];
+			return [ ...state, lane ];
 			console.log(lane);
 
 		default:
