@@ -1,6 +1,6 @@
 ## Kanban
 
-Kanban is project management software that focuses on searching for Star Wars Legend characters.
+Kanban is project management software that focuses on the Kanban methodology.
 
 ## Guides
 
